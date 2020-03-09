@@ -66,7 +66,7 @@ namespace StrUtil {
      * @return string
      */
     export const deleteBrackets = (str: string): string => {
-        return str.replace(/\[.*\]|[🅊🅌🄿🅆🅋🈐🈑🈒🈓🅂🈔🈕🈖🅍🄱🄽🈗🈘🈙🈚🈛⚿🈜🈝🈞🈟🈠🈡🈢🈣🈤🈥🅎㊙🈀]*/ug, '').trim();
+        return str.replace(/\[.*\]|[\u{1F14A}\u{1F14C}\u{1F13F}\u{1F146}\u{1F14B}\u{1F210}\u{1F211}\u{1F212}\u{1F213}\u{1F142}\u{1F214}\u{1F215}\u{1F216}\u{1F14D}\u{1F131}\u{1F13D}\u{1F217}\u{1F218}\u{1F219}\u{1F21A}\u{1F21B}\u{26BF}\u{1F21C}\u{1F21D}\u{1F21E}\u{1F21F}\u{1F220}\u{1F221}\u{1F222}\u{1F223}\u{1F224}\u{1F225}\u{1F14E}\u{3299}\u{1F200}]*/ug, '').trim();
     };
 }
 
