@@ -721,7 +721,7 @@ class RecordingManageModel extends Model implements RecordingManageModelInterfac
             .replace(/%CH%/, reserve.program.channel)
             .replace(/%SID%/, `${ reserve.program.serviceId }`)
             .replace(/%ID%/, `${ reserve.program.id }`)
-            .replace(/%TITLE%/, reserve.program.name);
+            .replace(/%TITLE%/, StrUtil.deleteBrackets(reserve.program.name));
 
         // 使用禁止文字列
         fileName = Util.replaceFileName(fileName);
