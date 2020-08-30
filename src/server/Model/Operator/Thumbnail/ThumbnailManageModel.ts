@@ -84,7 +84,7 @@ class ThumbnailManageModel extends Model implements ThumbnailManageModelInterfac
         const config = this.config.getConfig();
         const thumbnailDir = Util.getThumbnailPath();
         const thumbnailPath = path.join(thumbnailDir, `${ program.id }.jpg`);
-        const cmdStr = (config.thumbnailCmd || '%FFMPEG% -ss %THUMBNAIL_POSITION% -y -i %INPUT% -vframes 1 -f image2 -s %THUMBNAIL_SIZE% %OUTPUT%');
+        const cmdStr = (config.thumbnailCmd || '%FFMPEG% -ss %THUMBNAIL_POSITION% -y -i %INPUT% -vf bwdif,scale=%THUMBNAIL_SIZE%,thumbnail=90 -frames:v 1 %OUTPUT%');
         const cmds = ProcessUtil.parseCmdStr(cmdStr);
         cmds.bin.replace('%FFMPEG%', Util.getFFmpegPath());
 
